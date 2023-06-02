@@ -48,14 +48,14 @@ pip install -r requirements.txt
 
 実行方法を簡単に説明します．
 
-- `filename` : `input`ディレクトリ内の画像ファイルの**ファイル名**
+- `filename` : 入力ファイルの絶対パスまたは相対パス
 - `lower_limit`: 整数で`edge`抽出の閾値の下限
 - `upper_limit`: 整数で`edge`抽出の閾値の上限
 
 ```bash
 git clone https://github.com/kkml4220/line-extraction.git
 cd line-extraction
-python line_extraction.py [filename] [lower_limit] [upper_limit]
+python line_extraction.py [filepath] [lower_limit] [upper_limit]
 ```
 
 #### Example of execution
@@ -63,7 +63,7 @@ python line_extraction.py [filename] [lower_limit] [upper_limit]
 `input/sample_background.png`を閾値の下限`lower_limit:1`，上限`upper_limit:10`で実行
 
 ```bash
-python line_extraction.py sample_background.png 1 10
+python line_extraction.py input/sample_background.png 1 10
 ```
 
 ## Author
