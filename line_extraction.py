@@ -3,6 +3,7 @@ import os
 import sys
 
 
+OUTPUT_DIR_NAME = "output"
 # 出力するファイルのフォーマットを指定する定数
 OUTPUT_EXTENTION = "png"
 
@@ -42,12 +43,12 @@ def get_inputfile_abs_path(path):
 
 
 def get_output_dir_path():
-    """outputディレクトリの絶対パス
-        Return (str): このスクリプトと同階層にあるoutputディレクトリの絶対パスを返します
+    """OUTPUT_DIR_NAMEディレクトリの絶対パス
+        Return (str): このスクリプトと同階層にあるOUTPUT_DIR_NAMEディレクトリの絶対パスを返します
     """
     # このスクリプトの実行されている絶対パスのディレクトリのパスを返す
     script_abs_dir_path = os.path.dirname(__file__)
-    output_dir_path = os.path.join(script_abs_dir_path, "output")
+    output_dir_path = os.path.join(script_abs_dir_path, OUTPUT_DIR_NAME)
 
     # ouputディレクトリが存在しない場合
     if not os.path.exists(output_dir_path):
